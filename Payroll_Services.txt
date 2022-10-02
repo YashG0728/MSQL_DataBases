@@ -48,3 +48,16 @@ Query OK, 1 row affected (0.00 sec)
 
 mysql> INSERT INTO payroll_services (id,name,salary,start_date) values (6,'Yash Gharde',96000,'2016-09-28');
 Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from payroll_services;
++----+-----------------+--------+------------+
+| id | name            | salary | start_date |
++----+-----------------+--------+------------+
+|  1 | Sparsh Gharde   |  90000 | 2016-06-26 |
+|  2 | Pranav Gharde   | 850000 | 2018-07-01 |
+|  3 | Bharat Pathak   | 880000 | 2016-06-01 |
+|  4 | Himanshu Gharde |  95000 | 2020-08-05 |
+|  5 | mohit pathak    |  70000 | 2020-05-05 |
+|  6 | Yash Gharde     |  96000 | 2016-09-28 |
++----+-----------------+--------+------------+
+6 rows in set (0.00 sec)
