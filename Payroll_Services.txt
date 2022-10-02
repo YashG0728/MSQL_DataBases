@@ -75,3 +75,56 @@ mysql> select salary from payroll_services where name = 'Bharat Pathak';
 |  88000 |
 +--------+
 1 row in set (0.00 sec)
+
+mysql> Alter table payroll_services Add Gender Char(1) After name;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> UPDATE payroll_services
+    -> SET Gender = 'M'
+    -> where id = 1;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE payroll_services
+    -> SET Gender = 'M'
+    -> where id = 2;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE payroll_services
+    -> SET Gender = 'M'
+    -> where id = 3;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE payroll_services
+    -> SET Gender = 'M'
+    -> where id = 4;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE payroll_services
+    -> SET Gender = 'M'
+    -> where id = 5;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE payroll_services
+    -> SET Gender = 'M'
+    -> where id = 6;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from payroll_services;
++----+-----------------+--------+--------+------------+
+| id | name            | Gender | salary | start_date |
++----+-----------------+--------+--------+------------+
+|  1 | Sparsh Gharde   | M      |  90000 | 2016-06-26 |
+|  2 | Pranav Gharde   | M      |  85000 | 2018-07-01 |
+|  3 | Bharat Pathak   | M      |  88000 | 2016-06-01 |
+|  4 | Himanshu Gharde | M      |  95000 | 2020-08-05 |
+|  5 | mohit pathak    | M      |  70000 | 2020-05-05 |
+|  6 | Yash Gharde     | M      |  96000 | 2016-09-28 |
++----+-----------------+--------+--------+------------+
+6 rows in set (0.00 sec)
