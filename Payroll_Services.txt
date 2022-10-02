@@ -128,3 +128,43 @@ mysql> select * from payroll_services;
 |  6 | Yash Gharde     | M      |  96000 | 2016-09-28 |
 +----+-----------------+--------+--------+------------+
 6 rows in set (0.00 sec)
+
+mysql> select sum(salary) from payroll_services where gender ='M' group by gender;
++-------------+
+| sum(salary) |
++-------------+
+|      524000 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(salary) from payroll_services where gender ='M' group by gender;
++-------------+
+| avg(salary) |
++-------------+
+|  87333.3333 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select min(salary) from payroll_services where gender ='M' group by gender;
++-------------+
+| min(salary) |
++-------------+
+|       70000 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select max(salary) from payroll_services where gender ='M' group by gender;
++-------------+
+| max(salary) |
++-------------+
+|       96000 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select count(salary) from payroll_services where gender ='M' group by gender;
++---------------+
+| count(salary) |
++---------------+
+|             6 |
++---------------+
+1 row in set (0.00 sec)
