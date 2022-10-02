@@ -61,3 +61,17 @@ mysql> select * from payroll_services;
 |  6 | Yash Gharde     |  96000 | 2016-09-28 |
 +----+-----------------+--------+------------+
 6 rows in set (0.00 sec)
+
+mysql> UPDATE payroll_services
+    -> SET salary = '88000'
+    -> where id = 3;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select salary from payroll_services where name = 'Bharat Pathak';
++--------+
+| salary |
++--------+
+|  88000 |
++--------+
+1 row in set (0.00 sec)
